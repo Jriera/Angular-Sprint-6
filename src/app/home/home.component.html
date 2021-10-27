@@ -1,0 +1,6 @@
+<div *ngIf='show===false'>
+    <h3>Benvinguts a les aventures de l'heroi i la nau misteriosa</h3>
+    <button (click)='flipper()'>Endavant!</button>
+</div>
+<app-escena *ngIf='show===true' [frasesEscena]='frases'></app-escena>
+<!-- <div *ngFor='let frase of frases'>{{frase.frase}}</div> -->

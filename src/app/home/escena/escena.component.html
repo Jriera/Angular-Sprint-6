@@ -1,0 +1,7 @@
+
+<div id="button-wrapper">
+    <button (click)='prevSentence()'>Anterior</button>
+    <button (click)='nextSentence()'>Següent</button>
+</div>
+
+<div class="frase" *ngFor='let frase of frasesEscena;let i = index;' [class.selected]='currentSentence ===i'>{{frase}}</div>
