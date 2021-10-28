@@ -1,30 +1,39 @@
 import { Component, OnInit } from '@angular/core';
-
+import { aventura } from 'src/models/aventura';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  show:boolean=false;
-frases:string[]=[
+  show: boolean = false;
+  frases: aventura[] = [
+    {
+      text: "El nostre heroi estava surant per l'espai sideral quan a la llunyania va albirar una nau espacial",
+      img: '1.jpg',
+    },
 
-  "El nostre heroi estava surant per l'espai sideral quan a la llunyania va albirar una nau espacial",
+    {
+      text: "Sentia curiositat per l'interior de la nau i es va posar a inspeccionar-la. Va arribar a una sala amb dues portes.",
+      img: '2.jpg',
+    },
 
- "Sentia curiositat per l'interior de la nau i es va posar a inspeccionar-la. Va arribar a una sala amb dues portes.",
+    {
+      text: "L'heroi va decidir travessar la porta que el portava a casa",
+      img: '3.jpg',
+    },
 
-  "L'heroi va decidir travessar la porta que el portava a casa",
+    {
+      text: 'Mentrestant, altres heroes no van tenir tanta sort en la seva elecció ...',
+      img: '4.jpg',
+    },
+  ];
+  constructor() {}
 
-  "Mentrestant, altres heroes no van tenir tanta sort en la seva elecció ..."
-
-]
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  flipper() {
+    this.show === true ? (this.show = false) : (this.show = true);
+    console.log(this.show);
   }
-flipper(){
-  this.show===true?this.show=false:this.show=true
-  console.log(this.show)
-}
 }

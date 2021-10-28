@@ -1,0 +1,33 @@
+
+#benvinguda{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#center{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+button{
+    padding: 12px;
+    cursor: pointer;
+    background-color: #621041;
+    color: white;
+}
+
+#benvinguda-bg{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}

@@ -1,3 +1,9 @@
+
+.frase-wrapper{
+    padding:0 28px;
+    margin-top: 32px;
+    
+}
 .frase{
     border-radius: 50px;
     border:solid black 2px;
@@ -5,7 +11,9 @@
     margin-bottom: 16px;
     text-align: center;
 }
-
+.notSelected{
+    background-color:rgba(255, 255, 255, 0.7);
+}
 .selected{
     background-color: pink;
 }
@@ -15,9 +23,27 @@
     flex-direction: row;
     justify-content: center;
     margin-bottom: 12px;
+    padding: 0 8px;
 }
 
 #button-wrapper button{
     width: 50%;
     padding: 16px;
+    cursor: pointer;
 }
+.container {
+    position: relative;
+    padding-top: 15px;
+    height: 100vh;
+   
+}
+
+#hero-image {
+    position:absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+

@@ -1,7 +1,13 @@
+<div class="container">
 
-<div id="button-wrapper">
-    <button (click)='prevSentence()'>Anterior</button>
-    <button (click)='nextSentence()'>Següent</button>
+    <div id="button-wrapper">
+        <button (click)='[prevSentence()]'>Anterior</button>
+        <button (click)='[nextSentence()]'>Següent</button>
+    </div>
+
+    <div class="frase-wrapper">
+        <div class="frase" *ngFor='let frase of frasesEscena;let i = index;' [class.notSelected]='currentSentence!=i'
+            [class.selected]='currentSentence ===i'>{{frase.text}}</div>
+    </div>
+    <img id='hero-image' src="assets/{{frasesEscena[currentSentence].img}}" alt="">
 </div>
-
-<div class="frase" *ngFor='let frase of frasesEscena;let i = index;' [class.selected]='currentSentence ===i'>{{frase}}</div>
