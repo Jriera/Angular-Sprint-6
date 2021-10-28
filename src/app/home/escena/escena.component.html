@@ -1,13 +1,24 @@
 <div class="container">
+  <div id="button-wrapper">
+    <button (click)="[prevSentence()]">Anterior</button>
+    <button (click)="[nextSentence()]">Següent</button>
+  </div>
 
-    <div id="button-wrapper">
-        <button (click)='[prevSentence()]'>Anterior</button>
-        <button (click)='[nextSentence()]'>Següent</button>
+  <div class="frase-wrapper">
+    <div
+      class="frase"
+      *ngFor="let frase of frasesEscena; let i = index"
+      [class.notSelected]="currentSentence != i"
+      [class.selected]="currentSentence === i"
+    >
+      {{ frase.text }}
     </div>
-
-    <div class="frase-wrapper">
-        <div class="frase" *ngFor='let frase of frasesEscena;let i = index;' [class.notSelected]='currentSentence!=i'
-            [class.selected]='currentSentence ===i'>{{frase.text}}</div>
-    </div>
-    <img id='hero-image' src="assets/{{frasesEscena[currentSentence].img}}" alt="">
+  </div>
+  <img
+    id="hero-image"
+    src="https://stackblitz.com/files/angular-ivy-3jc4kk/github/Jriera/Angular-Sprint-6/master/src/assets/{{
+      frasesEscena[currentSentence].img
+    }}"
+    alt=""
+  />
 </div>

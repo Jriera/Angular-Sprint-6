@@ -1,8 +1,12 @@
-<div id="benvinguda" *ngIf='show===false'>
-    <div id="center">
-        <h2>Benvinguts a les aventures de l'heroi i la nau misteriosa</h2>
-        <button (click)='flipper()'>Endavant!</button>
-    </div>
-    <img id="benvinguda-bg" src="/assets/2352-min.jpg" alt="">
+<div id="benvinguda" *ngIf="show === false">
+  <div id="center">
+    <h2>Benvinguts a les aventures de l'heroi i la nau misteriosa</h2>
+    <button (click)="flipper()">Endavant!</button>
+  </div>
+  <img
+    id="benvinguda-bg"
+    src="https://stackblitz.com/files/angular-ivy-3jc4kk/github/Jriera/Angular-Sprint-6/master/src/assets/2352-min.jpg"
+    alt=""
+  />
 </div>
-<app-escena *ngIf='show===true' [frasesEscena]='frases'></app-escena>
+<app-escena *ngIf="show === true" [frasesEscena]="frases"></app-escena>
